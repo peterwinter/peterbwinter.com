@@ -1,6 +1,6 @@
 <template>
   <v-app dark>
-    <v-main>
+    <v-main class='rich-black'>
       <v-container>
         <nuxt />
       </v-container>

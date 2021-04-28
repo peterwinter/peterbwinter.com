@@ -1,72 +1,98 @@
 <template>
-  <v-row justify="center" align="center">
-    <v-col cols="12" sm="8" md="6">
-      <div class="text-center">
-        <logo />
-      </div>
-      <v-card>
-        <v-card-title class="headline">
-          Peter B. Winter, PhD.
-        </v-card-title>
-        <v-card-text>
-          <p>peter stuff</p>
-          <p>
-            some other stuff
+  <v-row justify="start">
+    <v-col cols=12 sm=10 md=6 xl=4>
+      <v-card class='transparent'>
+
+        <v-card outlined>
+          <v-img>
+            <v-icon dark x-large>mdi-cat</v-icon>
+          </v-img>
+        </v-card>
+
+        <p class="pt-8 bodyText">
+          Hi! I’m Peter Winter, PhD,
+          <span class='azure--text'> data scientist </span> + <span class='azure--text'> designer </span>.
+        </p>
+
+        <p class="pt-4 bodyText">
+          I combine design thinking with analytical problem solving to create data-driven solutions for users and stakeholders.
+        </p>
+
+        <p class="pt-8 bodyText">
+          <span class='gold--text'>IDEO </span> ~ <span class='gold--text'> Lead Data Scientist </span> + <span class='gold--text'> Designer </span>
+        </p>
+
+        <p class="pt-4 bodyText">
+          I lead design teams to tackle complex challenges for clients across industries, including healthcare, finance, and food.
+        </p>
+
+
+        <p class="pt-8 bodyText">
+          <a class='aquamarine--text' href="https://www.lemongrass.team/" target='_blank'>Lemongrass</a> ~ <span class='aquamarine--text'> Co-Creator </span> + <span class='aquamarine--text'> Backend Developer </span>
+        </p>
+        <p class="pt-4 bodyText">
+          Team brainstorming web app. I designed the backend and user experience, including interactive data visualizations.
+        </p>
+
+        <p class="pt-8 bodyText">
+          <span class='lavendar--text'>Skills</span>
+        </p>
+        <v-row>
+        <v-col cols=1 class='pa-0' align-self='start'>
+          <p class="pt-4 bodyText">
+            <span class='lavendar--text'>~ </span>
           </p>
-          <p>
-            Find a bug? Report it on the github <a
-              href="https://github.com/vuetifyjs/vuetify/issues"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="contribute"
-            >
-              issue board
-            </a>.
-          </p>
-          <p>Thank you for developing with Vuetify and I look forward to bringing more exciting features in the future.</p>
-          <div class="text-xs-right">
-            <em><small>&mdash; John Leider</small></em>
-          </div>
-          <hr class="my-3">
-          <a
-            href="https://nuxtjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Nuxt Documentation
-          </a>
-          <br>
-          <a
-            href="https://github.com/nuxt/nuxt.js"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Nuxt GitHub
-          </a>
-        </v-card-text>
-        <v-card-actions>
-          <v-spacer />
-          <v-btn
-            color="primary"
-            nuxt
-            to="/inspire"
-          >
-            Continue
-          </v-btn>
-        </v-card-actions>
+          </v-col>
+          <v-col cols=11 class='pa-0'>
+          Team brainstorming web app. I designed the backend and user experience, including interactive data visualizations.
+        </p>
+        </v-col>
+      </v-row>
+
+
       </v-card>
     </v-col>
   </v-row>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
-import VuetifyLogo from '~/components/VuetifyLogo.vue'
+
 
 export default {
   components: {
-    Logo,
-    VuetifyLogo
+
   }
 }
 </script>
+
+<style>
+/* colors */
+.transparent {
+  .background-color: transparent !important
+}
+
+.azure--text {color: #00acdb !important; }
+.gold--text {color: #ffd11a !important; }
+.aquamarine--text {color: #85ffc7 !important; }
+.lavendar--text {color: #CFBFF7 !important; }
+
+.rich-black {background-color: #0d0d0d !important; }
+
+/* typeface */
+.headText {
+  font-family: 'Fira Mono', 'Courier', 'sans-serif' !important;
+  font-size: 2.6rem !important;
+  line-height: 3rem !important;
+}
+.subHeadText {
+  font-family: 'Fira Mono', 'Courier', 'sans-serif' !important;
+  font-size: 2rem !important;
+  line-height: 2.4rem !important;
+}
+.bodyText {
+  font-family: 'Fira Mono', 'Courier', 'sans-serif' !important;
+  font-size: 1.4rem !important;
+  line-height: 1.8rem !important;
+}
+
+</style>
