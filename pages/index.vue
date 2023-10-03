@@ -10,29 +10,29 @@
         </v-card>
 
         <p class="pt-8 bodyText">
-          Hi! I’m Peter Winter, PhD,
-          <span class='azure--text'> data scientist </span> + <span class='azure--text'> designer </span>.
+          Hi! I’m Peter Winter, PhD. 
+        </p>        
+        <p class="pt-8 bodyText">  
+          I'm a
+          <span class='azure--text'> data scientist</span>, 
+          <span class='azure--text'> researcher</span>,
+          and
+          <span class='azure--text'> machine learning engineer</span>.
         </p>
 
         <p class="pt-4 bodyText">
           I combine design thinking with analytical problem solving to create data-driven solutions for users and stakeholders.
+
         </p>
 
-        <p class="pt-8 bodyText">
-          <span class='gold--text'>IDEO </span> ~ <span class='gold--text'> Lead Data Scientist </span> + <span class='gold--text'> Designer </span>
-        </p>
-
-        <p class="pt-4 bodyText">
-          I lead design teams to tackle complex challenges for clients across industries, including healthcare, finance, and food.
-        </p>
-
-
-        <p class="pt-8 bodyText">
-          <a class='aquamarine--text' href="https://www.lemongrass.team/" target='_blank'>Lemongrass</a> ~ <span class='aquamarine--text'> Co-Creator </span> + <span class='aquamarine--text'> Backend Developer </span>
-        </p>
-        <p class="pt-4 bodyText">
-          Team brainstorming web app. I designed the backend and user experience, including interactive data visualizations.
-        </p>
+        <span v-for="(job, index) in jobs" :key="index">
+          <p class="pt-8 bodyText" >
+            <span class='gold--text'>{{job.co}} </span> ~ <span class='gold--text'> {{job.title}} </span>
+          </p>
+          <p class="pt-4 bodyText">
+            {{job.desc}}
+          </p>
+        </span>
 
         <p class="pt-8 bodyText">
           <span class='lavendar--text'>Skills</span>
@@ -44,11 +44,9 @@
           </p>
           </v-col>
           <v-col cols=11 class='pa-0'>
-          Team brainstorming web app. I designed the backend and user experience, including interactive data visualizations.
         </p>
         </v-col>
       </v-row>
-
 
       </v-card>
     </v-col>
@@ -58,11 +56,37 @@
 <script>
 
 
-export default {
-  components: {
+  export default {
+    components: {},
+    data () {return {
+      jobs: [
+        {
+          id: 0, 
+          co: 'IDEO',
+          title: 'Senior Lead Data Scientist',
+          desc: 'Inventing new products and services - that are powered by data and AI.'
+        },
+        {
+          id: 1, 
+          co: 'Datascope',
+          title: 'Data Scientist + Data Engineer',
+          desc: 'Building end-to-end ML and analysis pipelines.'
+        },
+        {
+          id: 2, 
+          co: 'Northwestern University',
+          title: 'Post-doctoral Researcher',
+          desc: 'Research on complex sytems, networks, and aging.'
+        }
+      ],
+      skills: {
+        subsection: ['skill1', 'skill2']
 
+      }
+    }}
   }
-}
+
+
 </script>
 
 <style>
