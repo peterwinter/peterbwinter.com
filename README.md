@@ -1,5 +1,17 @@
 # peterbwinter.com
 
+This is the build repo.
+It uses vue + nuxt to 
+let me develop and interate by serving the Vue code as a single page app.
+
+Then when it's ready, I use the generate command to
+create all the files for a static website.
+
+[The suboptimal bit]
+All that's left is to copy the generated code into my other repo:
+`peterbwinter.github.io`
+push the changes to github and the new site will be live.
+
 ## Build Setup
 
 ```bash
